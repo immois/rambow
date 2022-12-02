@@ -5,6 +5,10 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**"]
     },
+    "store#build": {
+      "dependsOn": ["^build", "$SELLER_URL"],
+      "outputs": [".next/**"]
+    },
     "lint": {
       "outputs": []
     },
