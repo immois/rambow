@@ -1,8 +1,6 @@
 {
   "name": "@rambow/ui",
   "version": "0.1.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
   "license": "MIT",
   "scripts": {
     "dev": "pnpm build:swc -w",
@@ -26,8 +24,19 @@
     "./globals.css": "./dist/styles/globals.css"
   },
   "files": [
-    "dist"
+    "dist/**/*.{js,cjs,d.ts,d.cts,css}"
   ],
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*",
+        "src/*/index"
+      ],
+      "tailwind": [
+        "dist/tailwind.d.cts"
+      ]
+    }
+  },
   "dependencies": {
     "@swc/helpers": "0.4.14",
     "clsx": "1.2.1"
