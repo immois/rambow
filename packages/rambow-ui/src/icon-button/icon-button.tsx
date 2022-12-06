@@ -13,7 +13,7 @@ type Props<E extends React.ElementType> = PropsWithChildren<
 > &
   Omit<React.ComponentPropsWithoutRef<E>, keyof IconButtonProps<E>>;
 
-export const IconButton = <E extends ElementType>({ icon, as, size = 'medium', className, ...rest }: Props<E>) => {
+const IconButton = <E extends ElementType>({ icon, as, size = 'medium', className, ...rest }: Props<E>) => {
   const IconComp = icon;
   const Comp = as || 'button'
 
@@ -29,3 +29,5 @@ export const IconButton = <E extends ElementType>({ icon, as, size = 'medium', c
     </Comp>
   )
 }
+
+export default IconButton;
