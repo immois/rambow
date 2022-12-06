@@ -4,11 +4,11 @@
   "extends": "./base.json",
   "compilerOptions": {
     "target": "es5",
+    "module": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "noEmit": true,
     "incremental": true,
-    "module": "ESNext",
     "resolveJsonModule": true,
     "jsx": "preserve"
   },
