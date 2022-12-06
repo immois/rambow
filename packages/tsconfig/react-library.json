@@ -3,9 +3,14 @@
   "display": "React Library",
   "extends": "./base.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "lib": ["ES2015"],
+    "target": "ESNext",
     "module": "ESNext",
-    "target": "es6"
+    "rootDir": "src",
+    "outDir": "dist",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "incremental": true,
+    "jsx": "preserve"
   }
 }
