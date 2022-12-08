@@ -13,12 +13,12 @@ type Props<E extends React.ElementType> = PropsWithChildren<
 > &
   Omit<React.ComponentPropsWithoutRef<E>, keyof IconButtonProps<E>>;
 
-const IconButton = <E extends ElementType>({ icon, as, size = 'medium', className, ...rest }: Props<E>) => {
+const IconButton = <E extends ElementType = 'button'>({ icon, as, size = 'medium', className, ...rest }: Props<E>) => {
   const IconComp = icon;
   const Comp = as || 'button'
 
   const mergeClassName = clsx(
-    'box-content flex items-center text-gray-200',
+    'box-content flex items-center text-gray-600',
     size === 'medium' && 'w-6 h-6', size === 'large' && 'w-8 h-8',
     className
   )
